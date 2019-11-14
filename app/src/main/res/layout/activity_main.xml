@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/linear_height_main"
+        android:layout_below="@id/toolbar">
+
+        <!-- not used -->
+        <!--        <com.camerakit.CameraKitView-->
+        <!--            android:id="@+id/camera"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:adjustViewBounds="true"-->
+        <!--            android:keepScreenOn="true"-->
+        <!--            app:camera_facing="back"-->
+        <!--            app:camera_flash="auto"-->
+        <!--            app:camera_focus="continuous"-->
+        <!--            app:camera_permissions="camera" />-->
+
+        <com.wonderkiln.camerakit.CameraView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:keepScreenOn="true"
+            app:ckFlash="auto"
+            app:ckFocus="tap">
+
+            <com.scanner.myqr.Helper.GraphicOverlay
+                android:id="@+id/graphic_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.wonderkiln.camerakit.CameraView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear1"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/scan_button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:background="@color/colorPrimary"
+            android:text="@string/scan"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/button_text"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/generate_button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginStart="@dimen/button_margin_left"
+            android:layout_marginTop="@dimen/button_margin_top"
+            android:layout_marginBottom="@dimen/button_margin_bottom"
+            android:background="@color/colorGrey"
+            android:text="@string/qr"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/button_text"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

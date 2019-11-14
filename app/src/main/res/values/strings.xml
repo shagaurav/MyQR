@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyQR</string>
+    <string name="qr">QR</string>
+    <string name="scan">SCAN</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="generate">Generate</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+</resources>

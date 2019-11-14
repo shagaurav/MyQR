@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".GenerateActivity">
+
+
+    <EditText
+        android:id="@+id/edt_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/start"
+            android:layout_width="@dimen/generate_button_width"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:text="@string/generate" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/save"
+            android:layout_width="@dimen/generate_button_width"
+            android:backgroundTint="@color/colorGrey"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/QR_Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name" />
+
+
+
+
+</LinearLayout>
